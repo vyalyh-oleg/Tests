@@ -1,0 +1,212 @@
+Test environmnet
+--------------------------------------------------------------------------------
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         39 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  12
+  On-line CPU(s) list:   0-11
+Vendor ID:               GenuineIntel
+  Model name:            Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+    CPU family:          6
+    Model:               158
+    Thread(s) per core:  2
+    Core(s) per socket:  6
+    Socket(s):           1
+    Stepping:            10
+    CPU max MHz:         4500.0000
+    CPU min MHz:         800.0000
+    BogoMIPS:            5199.98
+
+JDK: jdk-17.0.7+8-oracle
+
+
+Test 'SharedResourceWithoutLock' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:26:53.648064519].
+Test has been finished [2023-08-22T10:26:54.487372209].
+Total time: 1.010581 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 0.330 seconds, deviation: 82.510 ms, outliers in deviations (normality): 0/1000 (0.000)
+	latestIncrTimePoint: 1.007 seconds, deviation: 79.626 ms, outliers in deviations (normality): 1/25 (0.040)
+	latestDecrTimePoint: 1.011 seconds, deviation: 59.840 ms, outliers in deviations (normality): 3/25 (0.120)
+
+Time for one operation: 1.925 ns
+
+SharedResource state: 179617 (inconsistent)
+
+
+Test 'SharedResourceWithReentrantLock' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:26:56.091573824].
+Test has been finished [2023-08-22T10:27:22.432120329].
+Total time: 26.340591 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 26.341 seconds, deviation: 948.737 ms, outliers in deviations (normality): 37/1000 (0.037)
+	latestIncrTimePoint: 26.337 seconds, deviation: 186.963 ms, outliers in deviations (normality): 2/25 (0.080)
+	latestDecrTimePoint: 26.340 seconds, deviation: 161.765 ms, outliers in deviations (normality): 2/25 (0.080)
+
+Time for one operation: 50.173 ns
+
+SharedResource state: 0
+
+
+Test 'SharedResourceWithReadLockOnly' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:27:24.067701187].
+Test has been finished [2023-08-22T10:29:59.610216533].
+Total time: 155.542558 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 155.542 seconds, deviation: 9641.367 ms, outliers in deviations (normality): 51/1000 (0.051)
+	latestIncrTimePoint: 155.410 seconds, deviation: 10012.280 ms, outliers in deviations (normality): 1/25 (0.040)
+	latestDecrTimePoint: 155.187 seconds, deviation: 15367.671 ms, outliers in deviations (normality): 1/25 (0.040)
+
+Time for one operation: 296.272 ns
+
+SharedResource state: 9536 (inconsistent)
+
+
+Test 'SharedResourceWithReadWriteLock' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:30:01.199345070].
+Test has been finished [2023-08-22T10:32:40.565846041].
+Total time: 159.366537 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 159.366 seconds, deviation: 19333.504 ms, outliers in deviations (normality): 7/1000 (0.007)
+	latestIncrTimePoint: 159.181 seconds, deviation: 6098.325 ms, outliers in deviations (normality): 1/25 (0.040)
+	latestDecrTimePoint: 158.822 seconds, deviation: 5221.187 ms, outliers in deviations (normality): 0/25 (0.000)
+
+Time for one operation: 303.555 ns
+
+SharedResource state: 0
+
+
+Test 'SharedResourceWithSynchronized' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:32:42.140668875].
+Test has been finished [2023-08-22T10:33:43.540060727].
+Total time: 61.399424 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 61.399 seconds, deviation: 2367.130 ms, outliers in deviations (normality): 48/1000 (0.048)
+	latestIncrTimePoint: 46.262 seconds, deviation: 2536.973 ms, outliers in deviations (normality): 2/25 (0.080)
+	latestDecrTimePoint: 50.699 seconds, deviation: 3116.097 ms, outliers in deviations (normality): 1/25 (0.040)
+
+Time for one operation: 116.951 ns
+
+SharedResource state: 0
+
+
+Test 'SharedResourceWithConcurrentHashMap' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:33:45.174281625].
+Test has been finished [2023-08-22T10:33:49.619406337].
+Total time: 4.445198 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 1.531 seconds, deviation: 391.142 ms, outliers in deviations (normality): 40/1000 (0.040)
+	latestIncrTimePoint: 4.416 seconds, deviation: 145.683 ms, outliers in deviations (normality): 1/25 (0.040)
+	latestDecrTimePoint: 4.445 seconds, deviation: 242.601 ms, outliers in deviations (normality): 1/25 (0.040)
+
+Time for one operation: 8.467 ns
+
+SharedResource state: 0
+
+
+Test 'SharedResourceWithConcurrentHashMap_getAsCompute' is preparing...
+--------------------------------------------------------------------------------
+Read iterations: 500000
+Write iterations: 500000
+Write/Read iterations ratio: 1.0
+
+Read threads: 1000
+Write threads: 50
+Write/Read threads ratio: 0.05
+
+Total read operations: 500000000
+Total write operations: 25000000
+Total write/read operations ratio: 0.05
+
+Test has been started [2023-08-22T10:33:51.222576744].
+Test has been finished [2023-08-22T10:34:37.899229832].
+Total time: 46.676749 seconds
+Time points from the beginning (0 seconds): 
+	latestReadTimePoint: 45.643 seconds, deviation: 4202.124 ms, outliers in deviations (normality): 48/1000 (0.048)
+	latestIncrTimePoint: 46.677 seconds, deviation: 291.363 ms, outliers in deviations (normality): 2/25 (0.080)
+	latestDecrTimePoint: 46.673 seconds, deviation: 198.580 ms, outliers in deviations (normality): 1/25 (0.040)
+
+Time for one operation: 88.908 ns
+
+SharedResource state: 0
+
+
